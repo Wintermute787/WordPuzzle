@@ -6,12 +6,13 @@ $(function(){
     var sentArr = sentence.split('');
     var vowels = ['a', 'e','i','o','u'];
 
-  for(var i = 0; i < sentArr.length; i++){
-    if(vowels.includes(sentArr[i])){
-      sentArr[i] = '-';
-      console.log(sentArr);
+    for(var i = 0; i < sentArr.length; i++){
+      if(vowels.includes(sentArr[i])){
+        sentArr[i] = '-';
+      }
     }
-    }
-
+    
+    var puzzle = sentArr.join(" ");
+    $(".puzzle").append("<li>" + puzzle + "</li>");
   })
 })
